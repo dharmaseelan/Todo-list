@@ -1,0 +1,98 @@
+.task-wrapper {
+  position: relative;
+  padding: 80px 0;
+  height: 100%;
+  @media (max-width: 767px) {
+    padding: 50px 0;
+    margin-bottom: 100px;
+  }
+}
+.task-list {
+  position: relative;
+  .task-card {
+    padding: 30px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    gap: 10px;
+    @include flex;
+    @include align-items(start);
+    @include justify-content(space-between);
+    background-color: $base-white-color;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+    .checktask {
+      position: relative;
+      top: 4px;
+    }
+    .content {
+      width: 95%;
+      word-break: break-all;
+      font-size: $font-size;
+    }
+  }
+}
+.add-task {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 40px;
+  form {
+    background-color: $base-white-color;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+    input {
+      margin: 15px 0;
+    }
+    .btn-wrapper {
+      width: 100%;
+      text-align: right;
+      .btn-primary {
+        width: auto;
+        padding: 10px 20px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    margin: 0;
+  }
+}
+.add-button {
+  width: 100%;
+  text-align: right;
+  margin: 0px 0 20px 0;
+  display: inline-block;
+  @include trans;
+  button svg {
+    @include trans;
+  }
+  &.creating {
+    button {
+      background-color: $secondary-color;
+      svg {
+        transform: rotate(135deg);
+      }
+    }
+  }
+  button {
+    @include primary-btn;
+    border-radius: 100px;
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 19px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+.delete-icon {
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  opacity: 0.3;
+  background-color: transparent;
+  @include trans;
+  &:hover {
+    opacity: 1;
+    path {
+      fill: $secondary-color;
+    }
+  }
+}

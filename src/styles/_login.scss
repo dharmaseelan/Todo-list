@@ -1,0 +1,48 @@
+.login {
+  position: relative;
+  @include flex;
+  height: 100vh;
+  .welcome-wrapper {
+    background-color: $bg-light;
+  }
+}
+.welcome-wrapper {
+  width: 60%;
+  height: 100%;
+  @include flex;
+  @include align-items(center);
+  @include justify-content(center);
+  figure {
+    img {
+      width: 400px;
+      height: 400px;
+      @include object-fit(contain);
+    }
+  }
+}
+.login-form {
+  background-color: $base-white-color;
+  padding: 80px 30px;
+  width: 40%;
+  @include flex;
+  @include align-items(center);
+  @include justify-content(center);
+  article {
+    margin-bottom: 40px;
+    figure img {
+      width: 120px;
+      height: 50px;
+      margin-bottom: 20px;
+      @include object-fit(contain);
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .welcome-wrapper {
+    display: none;
+  }
+  .login-form {
+    width: 100%;
+  }
+}

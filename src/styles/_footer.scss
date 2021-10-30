@@ -1,0 +1,32 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding: 15px 0;
+  width: 100%;
+  background-color: $secondary-color;
+  .footer-wrapper {
+    @include flex;
+    @include justify-content(space-between);
+    .f-link {
+      a {
+        margin-right: 15px;
+      }
+    }
+    p {
+      margin: 0;
+      opacity: 0.7;
+      font-size: $font-size - 1;
+      color: $base-white-color;
+    }
+    a {
+      color: $base-white-color;
+      text-decoration: none;
+      font-size: $font-size - 1;
+      @include trans;
+      &:hover,
+      &.is-active {
+        opacity: 0.8;
+      }
+    }
+  }
+}
